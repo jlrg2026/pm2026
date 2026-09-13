@@ -774,6 +774,67 @@
   footer a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
   footer a:hover { color: var(--accent); }
 
+  /* ===== VISIT COUNTER ===== */
+  .visit-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border-2);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: counterFloat 4s ease-in-out infinite;
+  }
+  .visit-counter:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.25);
+    animation-play-state: paused;
+  }
+  @keyframes counterFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  .visit-counter i {
+    color: var(--accent);
+    font-size: 0.85rem;
+    animation: eyeBlink 3s ease-in-out infinite;
+  }
+  @keyframes eyeBlink {
+    0%, 90%, 100% { opacity: 1; transform: scale(1); }
+    95% { opacity: 0.4; transform: scale(0.9); }
+  }
+  .visit-counter .vc-label {
+    color: var(--text-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .visit-counter .vc-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.9rem;
+    min-width: 28px;
+    text-align: center;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  .visit-counter.pulse {
+    animation: counterPulse 0.6s ease-out;
+  }
+  @keyframes counterPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(0, 212, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+  }
+
   /* ===== ANIMATIONS ===== */
   .reveal {
     opacity: 0; transform: translateY(40px);
@@ -814,6 +875,7 @@
     .contact-pill { justify-content: center; }
     .scroll-indicator { display: none; }
     .footer-inner { flex-direction: column; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
   }
   @media (max-width: 480px) {
     .metrics-strip { grid-template-columns: 1fr; }
@@ -1807,6 +1869,14 @@
         <div style="font-size: 0.78rem;">Senior Project Manager</div>
       </div>
     </div>
+
+    <!-- ✅ VISIT COUNTER (agregado) -->
+    <div class="visit-counter" id="visitCounter" title="Total visits to this portfolio">
+      <i class="fa-solid fa-eye"></i>
+      <span class="vc-label">Visits:</span>
+      <span class="vc-value" id="visitCount">—</span>
+    </div>
+
     <div class="footer-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -1947,7 +2017,6 @@
     modalSubtitle.textContent = card.dataset.subtitle;
     modalDesc.textContent = card.dataset.desc;
 
-    // Metrics
     modalMetrics.innerHTML = '';
     try {
       const metrics = JSON.parse(card.dataset.metrics);
@@ -1956,7 +2025,6 @@
       });
     } catch(e) {}
 
-    // Bullets
     modalBullets.innerHTML = '';
     try {
       const bullets = JSON.parse(card.dataset.bullets);
@@ -1965,7 +2033,6 @@
       });
     } catch(e) {}
 
-    // Tags
     modalTags.innerHTML = '';
     try {
       const tags = JSON.parse(card.dataset.tags);
@@ -1985,7 +2052,6 @@
 
   projectCards.forEach(card => {
     card.addEventListener('click', (e) => {
-      // No abrir si se hace click en un enlace
       if (e.target.closest('a')) return;
       openModal(card);
     });
@@ -2025,6 +2091,53 @@
       heroCard.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
     });
   }
+
+  // ===== ✅ VISIT COUNTER (agregado) =====
+  (async function() {
+    const counterEl = document.getElementById('visitCounter');
+    const valueEl = document.getElementById('visitCount');
+    if (!valueEl) return;
+
+    const namespace = 'joseluisrodriguez-portfolio';
+    const key = 'portfolio-2026';
+    const localKey = 'jr_portfolio_last_visit';
+    const oneDay = 24 * 60 * 60 * 1000;
+
+    // Solo incrementa 1 vez cada 24h por navegador
+    const last = localStorage.getItem(localKey);
+    const now = Date.now();
+    const shouldIncrement = !last || (now - parseInt(last, 10)) > oneDay;
+
+    try {
+      const endpoint = shouldIncrement
+        ? `https://api.counterapi.dev/v1/${namespace}/${key}/up`
+        : `https://api.counterapi.dev/v1/${namespace}/${key}/`;
+      const res = await fetch(endpoint);
+      const data = await res.json();
+      const target = data.count || data.value || 0;
+
+      if (shouldIncrement) localStorage.setItem(localKey, now.toString());
+
+      // Animación de conteo hacia arriba
+      const duration = 1500;
+      const start = performance.now();
+      const animate = (n) => {
+        const p = Math.min((n - start) / duration, 1);
+        const e = 1 - Math.pow(1 - p, 3);
+        valueEl.textContent = Math.floor(e * target).toLocaleString();
+        if (p < 1) requestAnimationFrame(animate);
+        else {
+          valueEl.textContent = target.toLocaleString();
+          // Pulso al terminar
+          counterEl.classList.add('pulse');
+          setTimeout(() => counterEl.classList.remove('pulse'), 700);
+        }
+      };
+      requestAnimationFrame(animate);
+    } catch (err) {
+      valueEl.textContent = '—';
+    }
+  })();
 </script>
 
 </body>
