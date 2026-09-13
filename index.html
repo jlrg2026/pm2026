@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jose Luis Rodriguez | Portfolio — Senior Project Manager</title>
+<meta name="description" content="Portfolio of Jose Luis Rodriguez, Major Engineering Project Director with 10+ years leading end-to-end execution of major capital investment projects. Expert in cost, schedule, safety, permitting, stage-gate governance, PMO, TPM, WCM, and operational readiness across LATAM, USA, Japan and Europe." />
+<meta name="keywords" content="Senior Project Manager Capital Investment Projects, End-to-End Execution, Cost Schedule Management, Stage-Gate Governance, PMO, TPM, WCM, IM, SHE Compliance, Permitting, Food Safety, Operational Readiness, Multidisciplinary Teams, Stakeholder Management, SAP, MS Project, PMP, Portfolio, Case Studies" />
+<meta name="author" content="Jose Luis Rodriguez" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Jose Luis Rodriguez | Portfolio — Major Engineering Project Director" />
+<meta property="og:description" content="20+ major capital projects delivered across LATAM, USA, Japan and Europe. 98% on-time delivery, $4.5M+ in savings identified." />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+  :root {
+    --bg: #080b14;
+    --bg-2: #0d1220;
+    --surface: #111827;
+    --surface-2: #1a2236;
+    --surface-3: #232d47;
+    --border: #1f2937;
+    --border-2: #2d3a52;
+    --text: #f1f5f9;
+    --text-dim: #94a3b8;
+    --text-mute: #64748b;
+    --accent: #00d4ff;
+    --accent-2: #7c3aed;
+    --accent-3: #f59e0b;
+    --accent-4: #10b981;
+    --gradient: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+    --gradient-2: linear-gradient(135deg, #7c3aed 0%, #f59e0b 100%);
+    --gradient-3: linear-gradient(135deg, #10b981 0%, #00d4ff 100%);
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
+    --shadow: 0 20px 60px rgba(0,0,0,0.5);
+    --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
+    --radius: 16px;
+    --radius-lg: 24px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  /* ===== Ambient Background ===== */
+  .bg-ambient {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+  }
+  .bg-ambient::before,
+  .bg-ambient::after {
+    content: ''; position: absolute; width: 700px; height: 700px;
+    border-radius: 50%; filter: blur(140px); opacity: 0.12;
+    animation: float 25s ease-in-out infinite;
+  }
+  .bg-ambient::before { background: var(--accent); top: -250px; left: -250px; }
+  .bg-ambient::after { background: var(--accent-2); bottom: -250px; right: -250px; animation-delay: -12s; }
+  @keyframes float {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(80px, 60px) scale(1.15); }
+  }
+  .grid-bg {
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.3;
+    background-image:
+      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
+  }
+
+  /* ===== Container ===== */
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 16px 0;
+    background: rgba(8, 11, 20, 0.72);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid transparent;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  nav.scrolled { border-bottom-color: var(--border); padding: 10px 0; background: rgba(8, 11, 20, 0.9); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+  .logo {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.05rem;
+    letter-spacing: -0.02em; display: flex; align-items: center; gap: 12px;
+    text-decoration: none; color: var(--text);
+  }
+  .logo-mark {
+    width: 38px; height: 38px; border-radius: 11px; background: var(--gradient);
+    display: grid; place-items: center; font-weight: 800; color: #080b14;
+    font-size: 0.85rem; box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
+    transition: transform 0.3s;
+  }
+  .logo:hover .logo-mark { transform: rotate(-8deg) scale(1.05); }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-text small { font-size: 0.65rem; color: var(--text-mute); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 30px; list-style: none; }
+  .nav-links a {
+    color: var(--text-dim); text-decoration: none; font-size: 0.88rem;
+    font-weight: 500; transition: color 0.2s; position: relative; padding: 4px 0;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 0;
+    height: 2px; background: var(--gradient); transition: width 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--text); }
+  .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+  .nav-cta { display: flex; align-items: center; gap: 12px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: var(--radius-sm);
+    font-weight: 600; font-size: 0.88rem; text-decoration: none;
+    border: none; cursor: pointer; font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--gradient); color: #080b14;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.25);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0, 212, 255, 0.45); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  .btn-sm { padding: 9px 16px; font-size: 0.8rem; }
+
+  .menu-toggle {
+    display: none; background: none; border: none; color: var(--text);
+    font-size: 1.4rem; cursor: pointer; padding: 8px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 130px 0 80px; position: relative;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 60px; align-items: center; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 16px; background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.25); border-radius: 100px;
+    font-size: 0.78rem; color: var(--accent); margin-bottom: 26px;
+    font-weight: 600; letter-spacing: 0.02em;
+  }
+  .status-dot {
+    width: 8px; height: 8px; background: var(--accent-4); border-radius: 50%;
+    box-shadow: 0 0 12px var(--accent-4); animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 5.2vw, 4rem);
+    font-weight: 700; line-height: 1.05; letter-spacing: -0.035em;
+    margin-bottom: 22px;
+  }
+  .hero h1 .gradient-text {
+    background: var(--gradient); -webkit-background-clip: text;
+    background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero-subtitle {
+    font-size: 1.12rem; color: var(--text-dim); margin-bottom: 30px;
+    max-width: 620px; line-height: 1.7;
+  }
+  .hero-subtitle strong { color: var(--text); font-weight: 600; }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 36px;
+    font-size: 0.88rem; color: var(--text-dim);
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-meta i { color: var(--accent); font-size: 0.9rem; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Hero card */
+  .hero-card {
+    background: linear-gradient(160deg, var(--surface) 0%, var(--surface-2) 100%);
+    border: 1px solid var(--border-2); border-radius: var(--radius-lg);
+    padding: 34px; box-shadow: var(--shadow); position: relative;
+    overflow: hidden; transition: transform 0.4s ease;
+  }
+  .hero-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--gradient);
+  }
+  .hero-card::after {
+    content: ''; position: absolute; top: -50%; right: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-card > * { position: relative; z-index: 1; }
+  .hero-card-avatar {
+    width: 84px; height: 84px; border-radius: 22px; background: var(--gradient);
+    display: grid; place-items: center; font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800; font-size: 1.9rem; color: #080b14; margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+  }
+  .hero-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; margin-bottom: 4px; }
+  .hero-card .role { color: var(--accent); font-size: 0.88rem; font-weight: 500; margin-bottom: 6px; }
+  .hero-card .certs { color: var(--text-mute); font-size: 0.78rem; margin-bottom: 22px; }
+  .hero-card-stats {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 18px; padding-top: 22px; border-top: 1px solid var(--border);
+  }
+  .stat-item .stat-num {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700;
+    background: var(--gradient); -webkit-background-clip: text;
+    background-clip: text; -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+  }
+  .stat-item .stat-label {
+    font-size: 0.72rem; color: var(--text-mute);
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* ===== Scroll Indicator ===== */
+  .scroll-indicator {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--text-mute); font-size: 0.7rem; letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px; height: 40px; background: linear-gradient(to bottom, var(--accent), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.4); opacity: 0.4; }
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 100px 0; position: relative; }
+  .section-header { margin-bottom: 56px; max-width: 760px; }
+  .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--accent); margin-bottom: 16px;
+  }
+  .section-label::before { content: ''; width: 28px; height: 2px; background: var(--accent); }
+  .section-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700; letter-spacing: -0.025em; line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .section-header p { color: var(--text-dim); font-size: 1.02rem; line-height: 1.7; }
+  .section-header.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .section-header.center .section-label { justify-content: center; }
+  .section-header.center .section-label::before { display: none; }
+
+  /* ===== METRICS STRIP ===== */
+  .metrics-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; background: var(--surface); border: 1px solid var(--border-2);
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .metric-cell {
+    padding: 36px 24px; text-align: center; position: relative;
+    transition: background 0.3s;
+  }
+  .metric-cell:not(:last-child)::after {
+    content: ''; position: absolute; right: 0; top: 20%; bottom: 20%;
+    width: 1px; background: var(--border);
+  }
+  .metric-cell:hover { background: var(--surface-2); }
+  .metric-cell i {
+    font-size: 1.4rem; color: var(--accent); margin-bottom: 12px; display: block;
+  }
+  .metric-cell .num {
+    font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem;
+    font-weight: 700; line-height: 1; margin-bottom: 6px;
+    background: var(--gradient); -webkit-background-clip: text;
+    background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .metric-cell .lbl {
+    font-size: 0.78rem; color: var(--text-mute);
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start;
+  }
+  .about-text p { color: var(--text-dim); margin-bottom: 18px; font-size: 1rem; line-height: 1.8; }
+  .about-text p strong { color: var(--text); font-weight: 600; }
+  .about-highlights { display: grid; gap: 14px; margin-top: 28px; }
+  .highlight-item {
+    display: flex; gap: 14px; padding: 16px 18px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); transition: all 0.3s;
+  }
+  .highlight-item:hover { border-color: var(--accent); transform: translateX(6px); }
+  .highlight-item i {
+    color: var(--accent); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0;
+  }
+  .highlight-item .hi-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 2px; }
+  .highlight-item .hi-desc { font-size: 0.82rem; color: var(--text-mute); }
+
+  .about-side { display: flex; flex-direction: column; gap: 20px; }
+  .info-card {
+    background: var(--surface); border: 1px solid var(--border-2);
+    border-radius: var(--radius); padding: 26px;
+    transition: all 0.3s;
+  }
+  .info-card:hover { border-color: var(--accent-2); transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+  .info-card h4 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1rem;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .info-card h4 i { color: var(--accent-2); }
+  .info-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .info-list li {
+    display: flex; justify-content: space-between; font-size: 0.85rem;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border);
+  }
+  .info-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .info-list .k { color: var(--text-mute); }
+  .info-list .v { color: var(--text); font-weight: 500; text-align: right; }
+
+  /* ===== CORE COMPETENCES ===== */
+  .competences-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+  }
+  .competence-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative; overflow: hidden;
+  }
+  .competence-card::after {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 0; background: var(--gradient);
+    transition: height 0.4s ease;
+  }
+  .competence-card:hover {
+    transform: translateY(-6px); border-color: var(--border-2);
+    box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+  }
+  .competence-card:hover::after { height: 100%; }
+  .competence-icon {
+    width: 54px; height: 54px; border-radius: 14px;
+    background: linear-gradient(135deg, rgba(0,212,255,0.12), rgba(124,58,237,0.12));
+    border: 1px solid var(--border-2); display: grid; place-items: center;
+    font-size: 1.35rem; color: var(--accent); margin-bottom: 18px;
+    transition: all 0.35s;
+  }
+  .competence-card:hover .competence-icon {
+    background: var(--gradient); color: #080b14;
+    transform: scale(1.08) rotate(-6deg);
+    box-shadow: 0 10px 24px rgba(0, 212, 255, 0.3);
+  }
+  .competence-card h4 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.02rem;
+    margin-bottom: 10px; font-weight: 600;
+  }
+  .competence-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.65; }
+
+  /* ===== FEATURED PROJECTS ===== */
+  .projects-filter {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 9px 20px; background: var(--surface); border: 1px solid var(--border-2);
+    border-radius: 100px; color: var(--text-dim); font-size: 0.82rem;
+    font-weight: 500; cursor: pointer; font-family: inherit;
+    transition: all 0.3s;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active {
+    background: var(--gradient); color: #080b14;
+    border-color: transparent; font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.25);
+  }
+
+  .projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+  }
+  .project-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .project-card:hover {
+    transform: translateY(-8px); border-color: var(--accent);
+    box-shadow: 0 32px 64px rgba(0, 212, 255, 0.15);
+  }
+  .project-card.hidden { display: none; }
+  .project-header {
+    padding: 26px 28px 20px; position: relative;
+    background: linear-gradient(160deg, var(--surface-2) 0%, var(--surface) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .project-header::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--gradient);
+  }
+  .project-meta {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 14px; font-size: 0.75rem;
+  }
+  .project-company {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--accent); font-weight: 600; letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .project-year {
+    color: var(--text-mute); font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; padding: 3px 9px; background: var(--bg);
+    border-radius: 100px; border: 1px solid var(--border);
+  }
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.18rem;
+    font-weight: 600; line-height: 1.3; margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .project-subtitle { font-size: 0.82rem; color: var(--text-mute); }
+
+  .project-body { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+  .project-desc {
+    font-size: 0.87rem; color: var(--text-dim); line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .project-desc strong { color: var(--text); }
+
+  .project-metrics {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    margin-bottom: 20px; padding: 16px 0;
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .pm-item { text-align: center; }
+  .pm-value {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;
+    font-weight: 700; color: var(--accent); line-height: 1.1;
+  }
+  .pm-label {
+    font-size: 0.68rem; color: var(--text-mute); text-transform: uppercase;
+    letter-spacing: 0.05em; margin-top: 3px; font-weight: 600;
+  }
+
+  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  .project-tag {
+    font-size: 0.7rem; padding: 4px 10px; background: var(--bg-2);
+    border: 1px solid var(--border-2); border-radius: 6px;
+    color: var(--text-dim); font-weight: 500;
+  }
+
+  .project-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: auto; padding-top: 4px;
+  }
+  .project-impact {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; color: var(--accent-4); font-weight: 600;
+  }
+  .project-impact i { font-size: 0.85rem; }
+  .project-detail-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; color: var(--text); font-weight: 600;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .project-detail-link:hover { color: var(--accent); gap: 10px; }
+
+  /* ===== CASE STUDY MODAL ===== */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(8, 11, 20, 0.85);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    z-index: 2000; display: none; align-items: center; justify-content: center;
+    padding: 24px; opacity: 0; transition: opacity 0.3s;
+  }
+  .modal-overlay.active { display: flex; opacity: 1; }
+  .modal {
+    background: var(--surface); border: 1px solid var(--border-2);
+    border-radius: var(--radius-lg); max-width: 780px; width: 100%;
+    max-height: 88vh; overflow-y: auto; position: relative;
+    box-shadow: var(--shadow);
+    animation: modalIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .modal-close {
+    position: absolute; top: 18px; right: 18px; width: 36px; height: 36px;
+    border-radius: 50%; background: var(--bg-2); border: 1px solid var(--border-2);
+    color: var(--text); cursor: pointer; display: grid; place-items: center;
+    transition: all 0.3s; z-index: 2;
+  }
+  .modal-close:hover { background: var(--accent); color: var(--bg); transform: rotate(90deg); }
+  .modal-header {
+    padding: 32px 32px 24px; border-bottom: 1px solid var(--border);
+    background: linear-gradient(160deg, var(--surface-2) 0%, var(--surface) 100%);
+  }
+  .modal-header .project-company { margin-bottom: 10px; }
+  .modal-header h3 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem;
+    margin-bottom: 8px; letter-spacing: -0.02em;
+  }
+  .modal-header p { color: var(--text-mute); font-size: 0.85rem; }
+  .modal-body { padding: 32px; }
+  .modal-body h4 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1rem;
+    margin: 24px 0 12px; color: var(--accent); display: flex; align-items: center; gap: 8px;
+  }
+  .modal-body h4:first-child { margin-top: 0; }
+  .modal-body p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.75; margin-bottom: 12px; }
+  .modal-body ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .modal-body li {
+    position: relative; padding-left: 24px; font-size: 0.88rem;
+    color: var(--text-dim); line-height: 1.65;
+  }
+  .modal-body li::before {
+    content: '\f0da'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+    position: absolute; left: 0; top: 2px; color: var(--accent); font-size: 0.7rem;
+  }
+  .modal-metrics {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin: 24px 0; padding: 22px; background: var(--bg-2);
+    border: 1px solid var(--border-2); border-radius: var(--radius);
+  }
+  .modal-metrics .pm-item { text-align: center; }
+  .modal-metrics .pm-value { font-size: 1.6rem; }
+
+  /* ===== EXPERIENCE TIMELINE ===== */
+  .timeline { position: relative; padding-left: 44px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 14px; top: 10px; bottom: 10px;
+    width: 2px; background: linear-gradient(to bottom, var(--accent), var(--accent-2), transparent);
+  }
+  .timeline-item {
+    position: relative; margin-bottom: 48px; padding-bottom: 8px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -37px; top: 8px;
+    width: 16px; height: 16px; border-radius: 50%; background: var(--bg);
+    border: 3px solid var(--accent); box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.12);
+    transition: all 0.3s;
+  }
+  .timeline-item:hover::before {
+    background: var(--accent); box-shadow: 0 0 0 7px rgba(0, 212, 255, 0.25);
+    transform: scale(1.15);
+  }
+  .timeline-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 20px; margin-bottom: 8px; flex-wrap: wrap;
+  }
+  .timeline-company {
+    color: var(--accent); font-weight: 600; font-size: 0.85rem;
+    margin-bottom: 4px; letter-spacing: 0.02em;
+  }
+  .timeline-role {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem;
+    font-weight: 600; letter-spacing: -0.01em;
+  }
+  .timeline-date {
+    font-size: 0.75rem; color: var(--text-mute); background: var(--surface);
+    padding: 5px 12px; border-radius: 100px; border: 1px solid var(--border);
+    white-space: nowrap; font-family: 'JetBrains Mono', monospace;
+  }
+  .timeline-location {
+    font-size: 0.8rem; color: var(--text-mute); margin-top: 4px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .timeline-location i { color: var(--accent-2); font-size: 0.75rem; }
+  .timeline-body { margin-top: 16px; }
+  .timeline-body li {
+    list-style: none; position: relative; padding-left: 22px;
+    margin-bottom: 10px; font-size: 0.88rem; color: var(--text-dim);
+    line-height: 1.65;
+  }
+  .timeline-body li::before {
+    content: '\f0da'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+    position: absolute; left: 0; top: 1px; color: var(--accent); font-size: 0.72rem;
+  }
+  .timeline-body li strong { color: var(--text); font-weight: 600; }
+
+  /* ===== SKILLS ===== */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .skill-tag {
+    display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 500;
+    transition: all 0.3s; cursor: default;
+  }
+  .skill-tag:hover {
+    border-color: var(--accent); transform: translateX(6px);
+    background: var(--surface-2); box-shadow: var(--shadow-sm);
+  }
+  .skill-tag i { color: var(--accent); font-size: 1rem; width: 20px; text-align: center; }
+
+  /* Skills categories */
+  .skills-categories { display: grid; gap: 40px; }
+  .skill-category h4 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem;
+    color: var(--text); margin-bottom: 18px; display: flex;
+    align-items: center; gap: 10px; font-weight: 600;
+  }
+  .skill-category h4 i { color: var(--accent-2); }
+
+  /* ===== CERTIFICATIONS ===== */
+  .cert-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+  }
+  .cert-card {
+    background: var(--surface); border: 1px solid var(--border-2);
+    border-radius: var(--radius); padding: 26px 22px; text-align: center;
+    transition: all 0.35s; position: relative; overflow: hidden;
+  }
+  .cert-card:hover {
+    border-color: var(--accent-3); transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.12);
+  }
+  .cert-card i {
+    font-size: 2rem; margin-bottom: 14px; display: block;
+    background: var(--gradient-2); -webkit-background-clip: text;
+    background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .cert-card h5 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem;
+    margin-bottom: 6px; font-weight: 600;
+  }
+  .cert-card p { font-size: 0.75rem; color: var(--text-mute); }
+
+  /* ===== EDUCATION ===== */
+  .education-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .edu-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px; transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .edu-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 4px; height: 100%; background: var(--gradient-2);
+    opacity: 0.6;
+  }
+  .edu-card:hover { border-color: var(--accent-2); transform: translateY(-4px); }
+  .edu-card i {
+    font-size: 1.5rem; color: var(--accent-2); margin-bottom: 16px;
+    display: block;
+  }
+  .edu-card h4 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem;
+    margin-bottom: 6px; font-weight: 600;
+  }
+  .edu-card p { font-size: 0.85rem; color: var(--text-dim); }
+  .edu-card .edu-year {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+    color: var(--text-mute); margin-top: 10px; display: inline-block;
+    padding: 3px 10px; background: var(--bg); border-radius: 100px;
+    border: 1px solid var(--border);
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+  }
+  .testimonial-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 30px; position: relative;
+    transition: all 0.35s;
+  }
+  .testimonial-card:hover {
+    border-color: var(--accent); transform: translateY(-5px);
+    box-shadow: var(--shadow-sm);
+  }
+  .testimonial-card::before {
+    content: '\f10d'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+    position: absolute; top: 20px; right: 24px; font-size: 1.8rem;
+    color: var(--accent); opacity: 0.15;
+  }
+  .testimonial-text {
+    font-size: 0.9rem; color: var(--text-dim); line-height: 1.75;
+    margin-bottom: 22px; font-style: italic;
+  }
+  .testimonial-author {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 18px; border-top: 1px solid var(--border);
+  }
+  .testimonial-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--gradient); display: grid; place-items: center;
+    font-weight: 700; color: #080b14; font-size: 0.9rem;
+  }
+  .testimonial-name { font-weight: 600; font-size: 0.88rem; }
+  .testimonial-role { font-size: 0.75rem; color: var(--text-mute); }
+
+  /* ===== CONTACT / CTA ===== */
+  .cta-section { text-align: center; }
+  .cta-box {
+    background: linear-gradient(160deg, var(--surface) 0%, var(--surface-2) 100%);
+    border: 1px solid var(--border-2); border-radius: var(--radius-lg);
+    padding: 64px 40px; position: relative; overflow: hidden;
+  }
+  .cta-box::before {
+    content: ''; position: absolute; top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 55%);
+    animation: rotate 25s linear infinite;
+  }
+  @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .cta-box > * { position: relative; z-index: 1; }
+  .cta-box h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.7rem, 3.8vw, 2.5rem); margin-bottom: 16px;
+    letter-spacing: -0.025em;
+  }
+  .cta-box p { color: var(--text-dim); max-width: 620px; margin: 0 auto 32px; font-size: 1.02rem; }
+  .contact-methods {
+    display: flex; justify-content: center; gap: 14px;
+    flex-wrap: wrap; margin-top: 32px;
+  }
+  .contact-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 20px; background: var(--bg); border: 1px solid var(--border-2);
+    border-radius: 100px; font-size: 0.85rem; color: var(--text-dim);
+    text-decoration: none; transition: all 0.3s;
+  }
+  .contact-pill:hover {
+    border-color: var(--accent); color: var(--accent);
+    transform: translateY(-3px); box-shadow: var(--shadow-sm);
+  }
+  .contact-pill i { font-size: 0.95rem; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 44px 0 32px; border-top: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text-mute);
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .footer-brand { display: flex; align-items: center; gap: 12px; }
+  .footer-links { display: flex; gap: 22px; }
+  footer a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--accent); }
+
+  /* ===== ANIMATIONS ===== */
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .metrics-strip { grid-template-columns: repeat(2, 1fr); }
+    .metric-cell:nth-child(2)::after { display: none; }
+    .metric-cell:nth-child(1), .metric-cell:nth-child(2) { border-bottom: 1px solid var(--border); }
+  }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .nav-cta .btn-ghost { display: none; }
+    .nav-links.active {
+      display: flex; flex-direction: column; position: absolute;
+      top: 100%; left: 0; right: 0; background: var(--bg-2);
+      padding: 22px 24px; border-bottom: 1px solid var(--border);
+      gap: 14px; box-shadow: var(--shadow);
+    }
+  }
+  @media (max-width: 700px) {
+    section { padding: 70px 0; }
+    .hero { padding: 110px 0 60px; min-height: auto; }
+    .timeline { padding-left: 28px; }
+    .timeline-item::before { left: -23px; width: 14px; height: 14px; }
+    .timeline-header { flex-direction: column; gap: 8px; }
+    .cta-box { padding: 44px 24px; }
+    .modal-metrics { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-metrics { grid-template-columns: repeat(3, 1fr); }
+    .contact-methods { flex-direction: column; align-items: stretch; }
+    .contact-pill { justify-content: center; }
+    .scroll-indicator { display: none; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 480px) {
+    .metrics-strip { grid-template-columns: 1fr; }
+    .metric-cell::after { display: none !important; }
+    .metric-cell:not(:last-child) { border-bottom: 1px solid var(--border); }
+    .hero-cta { flex-direction: column; align-items: stretch; }
+    .hero-cta .btn { justify-content: center; }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--surface-3); border-radius: 5px; border: 2px solid var(--bg);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-ambient"></div>
+<div class="grid-bg"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="logo">
+      <div class="logo-mark">JR</div>
+      <div class="logo-text">
+        <span>Jose Luis Rodriguez</span>
+        <small>Senior Project Manager</small>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#competences">Competences</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost btn-sm">Get in Touch</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="status-dot"></span>
+        Available for Major Capital Projects · 2026
+      </div>
+      <h1 class="reveal">
+        Portfolio of a<br />
+        <span class="gradient-text">Senior Project Manager</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Senior leader with <strong>10+ years</strong> delivering <strong>end-to-end execution of major capital investment projects</strong> across FMCG, Financial Services, and Global Consulting. Proven expertise in <strong>cost, schedule, safety, permitting, stage-gate governance, and operational readiness</strong> in complex multinational environments.
+      </p>
+      <div class="hero-meta reveal">
+        <span><i class="fa-solid fa-location-dot"></i> Atizapán, Estado de México</span>
+        <span><i class="fa-solid fa-earth-americas"></i> LATAM · USA · Japan · Europe</span>
+        <span><i class="fa-solid fa-language"></i> Advanced English · Intermediate Portuguese · Fluent Spanish</span>
+      </div>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-folder-open"></i> View Featured Projects
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fa-solid fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card reveal" id="heroCard">
+      <div class="hero-card-avatar">JR</div>
+      <h3>Jose Luis Rodriguez</h3>
+      <div class="role">Senior Project Manager</div>
+      <div class="certs">PMP · ITIL · ITIL SOA · SCRUM</div>
+      <div class="hero-card-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-count="20" data-suffix="+">0</div>
+          <div class="stat-label">Major Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="98" data-suffix="%">0</div>
+          <div class="stat-label">On-Time Delivery</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="5000" data-suffix="+">0</div>
+          <div class="stat-label">Users Enabled</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="4" data-prefix="$" data-suffix="M+">0</div>
+          <div class="stat-label">Savings Identified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== METRICS STRIP ===== -->
+<section style="padding: 40px 0 80px;">
+  <div class="container">
+    <div class="metrics-strip reveal">
+      <div class="metric-cell">
+        <i class="fa-solid fa-trophy"></i>
+        <div class="num" data-count="10" data-suffix="+">0</div>
+        <div class="lbl">Years Leading Projects</div>
+      </div>
+      <div class="metric-cell">
+        <i class="fa-solid fa-globe"></i>
+        <div class="num" data-count="15" data-suffix="+">0</div>
+        <div class="lbl">Countries Impacted</div>
+      </div>
+      <div class="metric-cell">
+        <i class="fa-solid fa-users"></i>
+        <div class="num" data-count="60" data-suffix="+">0</div>
+        <div class="lbl">Team Members Led</div>
+      </div>
+      <div class="metric-cell">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div class="num" data-count="0">0</div>
+        <div class="lbl">Audit Findings</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">About</div>
+      <h2>Engineering Leadership That Delivers</h2>
+      <p>From strategy to start-up, I lead major capital investment projects end-to-end with full accountability for cost, schedule, quality, safety, permitting, and operational readiness.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I am a <strong>Senior Project Manager</strong> with over a decade of experience delivering <strong>major capital investment projects</strong> in complex, multinational environments. My career spans <strong>FMCG (PepsiCo), Financial Services (MUFG, BBVA, Banorte), Healthcare IT (Cegedim), and Global Consulting (Stefanini, BlueYonder)</strong>.
+        </p>
+        <p>
+          My approach combines <strong>rigorous project engineering governance</strong> — scope definition, estimating, scheduling, stage-gate documentation, and change control — with <strong>high-performance team leadership</strong>. I build and lead multidisciplinary teams of internal specialists, external contractors, and vendors under Agile, SAFe, Waterfall, and PMO frameworks.
+        </p>
+        <p>
+          I am known for <strong>turning complexity into execution</strong>: aligning cross-functional partners in Quality, SHE, Sourcing, and Manufacturing; engaging external stakeholders such as permitting authorities, utilities, and governmental bodies; and delivering transparent, data-driven reporting to senior leadership.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <i class="fa-solid fa-diagram-project"></i>
+            <div>
+              <div class="hi-title">End-to-End Accountability</div>
+              <div class="hi-desc">Cost, schedule, quality, safety, permitting, and operational readiness.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-sitemap"></i>
+            <div>
+              <div class="hi-title">Governance & Stage-Gate</div>
+              <div class="hi-desc">PMO frameworks, RAG dashboards, change control, zero audit findings.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-handshake"></i>
+            <div>
+              <div class="hi-title">Stakeholder Engagement</div>
+              <div class="hi-desc">C-Level, Steering Committees, permitting authorities, utilities.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div>
+              <div class="hi-title">Operational Excellence</div>
+              <div class="hi-desc">TPM, WCM, IM, continuous improvement, and process automation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-side reveal">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-id-badge"></i> Quick Facts</h4>
+          <ul class="info-list">
+            <li><span class="k">Location</span><span class="v">Atizapán, MX</span></li>
+            <li><span class="k">Experience</span><span class="v">10+ years</span></li>
+            <li><span class="k">Languages</span><span class="v">EN (Adv) · ES (Native)</span></li>
+            <li><span class="k">Certifications</span><span class="v">PMP · ITIL · Scrum</span></li>
+            <li><span class="k">Availability</span><span class="v">2026</span></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-industry"></i> Industries</h4>
+          <ul class="info-list">
+            <li><span class="k">FMCG</span><span class="v">PepsiCo</span></li>
+            <li><span class="k">Financial Services</span><span class="v">MUFG · BBVA · Banorte</span></li>
+            <li><span class="k">Healthcare IT</span><span class="v">Cegedim</span></li>
+            <li><span class="k">Global Consulting</span><span class="v">Stefanini · BlueYonder</span></li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-bolt"></i> Core Methodologies</h4>
+          <ul class="info-list">
+            <li><span class="k">Project</span><span class="v">Stage-Gate · PMO</span></li>
+            <li><span class="k">Agile</span><span class="v">Scrum · SAFe · PODs</span></li>
+            <li><span class="k">Operational</span><span class="v">TPM · WCM · IM</span></li>
+            <li><span class="k">Classic</span><span class="v">Waterfall</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CORE COMPETENCES ===== -->
+<section id="competences" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Core Competences</div>
+      <h2>What I Bring to Your Project</h2>
+      <p>Deep expertise aligned with Senior Project Manager requirements: capital execution, governance, teams, compliance, and operational excellence.</p>
+    </div>
+
+    <div class="competences-grid">
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>End-to-End Capital Project Execution</h4>
+        <p>Full accountability for cost, schedule, quality, safety, permitting, and operational readiness on major capital investment projects.</p>
+      </div>
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h4>PMO & Stage-Gate Governance</h4>
+        <p>Scope definition, estimating, scheduling, stage-gate documentation, project control logs, and RAG-status executive dashboards.</p>
+      </div>
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h4>Multidisciplinary Team Leadership</h4>
+        <p>Hybrid teams — internal specialists, developers, QA, external vendors, and contractors — under Agile, SAFe, and Waterfall.</p>
+      </div>
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h4>Safety, SHE & Compliance</h4>
+        <p>Food safety, environmental, permitting, and regulatory compliance with zero audit findings across multiple jurisdictions.</p>
+      </div>
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h4>Stakeholder & External Engagement</h4>
+        <p>Permitting authorities, utilities, governmental bodies, C-Level executives, and Steering Committees across borders.</p>
+      </div>
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h4>Operational Excellence</h4>
+        <p>TPM, WCM, IM, continuous improvement, process automation, and legacy decommissioning across multinational environments.</p>
+      </div>
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-coins"></i></div>
+        <h4>Cost & Schedule Management</h4>
+        <p>CAPEX/OPEX, change control, budget protection, and vendor renegotiation saving 15–22% in total cost of ownership.</p>
+      </div>
+      <div class="competence-card reveal">
+        <div class="competence-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h4>Executive Dashboards & Reporting</h4>
+        <p>RAG-status dashboards, business cases, strategic insights, and transparent progress updates to senior leadership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PROJECTS ===== -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Featured Projects</div>
+      <h2>Case Studies That Moved the Needle</h2>
+      <p>A selection of major programs delivered across FMCG, Financial Services, and Global Consulting. Click any card to see full case study details.</p>
+    </div>
+
+    <div class="projects-filter reveal">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="fmcg">FMCG</button>
+      <button class="filter-btn" data-filter="finance">Financial Services</button>
+      <button class="filter-btn" data-filter="consulting">Consulting</button>
+      <button class="filter-btn" data-filter="governance">Governance</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <!-- Project 1: MUFG -->
+      <article class="project-card reveal" data-category="finance governance"
+        data-title="Global CRM & Digital Transformation Program"
+        data-company="MUFG · Mexico / USA / Japan"
+        data-year="2024 – 2026"
+        data-subtitle="Global IT PMD"
+        data-desc="Spearheaded end-to-end CRM, marketing technology, and digital transformation programs bridging Mexico, USA, and Japan. Reported directly to Global Heads of Infrastructure."
+        data-metrics='[{"v":"$1.2M","l":"Savings Identified"},{"v":"18%","l":"CAPEX Reduction"},{"v":"40%","l":"Faster Decisions"}]'
+        data-bullets='[
+          "Led 4 concurrent cross-border transformation programs resulting in $1.2M in identified operational redundancies and 18% CAPEX reduction for FY2025 while maintaining 100% regulatory compliance.",
+          "Established PMO governance and agile delivery frameworks including weekly Steering Committee RAG-status dashboards for Senior Management (USA/Japan), accelerating executive decision-making velocity by 40% and securing zero audit findings.",
+          "Restructured vendor management frameworks consolidating 5 strategic suppliers into 2 partners, reducing external service costs by 22% while improving SLA performance metrics by 15%.",
+          "Deployed rigorous Project Control Logs and change management protocols, ensuring 100% alignment with corporate governance and eliminating $150K in potential rework costs."
+        ]'
+        data-tags='["Stage-Gate","PMO","Vendor Management","CAPEX","Change Control","Cross-Border"]'
+        data-impact="Zero audit findings">
+
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-company"><i class="fa-solid fa-building-columns"></i> MUFG</span>
+            <span class="project-year">2024 – 2026</span>
+          </div>
+          <h3 class="project-title">Global CRM & Digital Transformation Program</h3>
+          <p class="project-subtitle">Mexico · USA · Japan</p>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Led <strong>4 concurrent cross-border programs</strong> bridging Mexico, USA, and Japan with full PMO governance and stage-gate execution.</p>
+          <div class="project-metrics">
+            <div class="pm-item"><div class="pm-value">$1.2M</div><div class="pm-label">Savings</div></div>
+            <div class="pm-item"><div class="pm-value">18%</div><div class="pm-label">CAPEX ↓</div></div>
+            <div class="pm-item"><div class="pm-value">40%</div><div class="pm-label">Speed ↑</div></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Stage-Gate</span>
+            <span class="project-tag">PMO</span>
+            <span class="project-tag">Vendor Mgmt</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact"><i class="fa-solid fa-circle-check"></i> Zero audit findings</div>
+            <span class="project-detail-link">View Case <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: BBVA -->
+      <article class="project-card reveal" data-category="finance governance"
+        data-title="LATAM Infrastructure Health Check Program"
+        data-company="BBVA · LATAM Region"
+        data-year="2021 – 2024"
+        data-subtitle="Senior IT Project Manager – LATAM"
+        data-desc="Directed IT infrastructure and security programs across 10 LATAM countries, reporting directly to CTO and CIO."
+        data-metrics='[{"v":"65%","l":"Vulns Reduced"},{"v":"$2M+","l":"Funding Secured"},{"v":"10","l":"Countries"}]'
+        data-bullets='[
+          "Orchestrated region-wide Infrastructure Health Check program covering obsolescence, DR readiness, and security hardening, reducing critical vulnerabilities by 65% within 12 months across 10 LATAM countries.",
+          "Engineered standard operating procedures for regulatory compliance, achieving 100% adherence to local financial regulations and global security mandates, passing all external audits.",
+          "Mentored 5 junior Project Managers through structured development programs, resulting in 3 promotions to Senior roles within 18 months and improving team retention by 25%.",
+          "Delivered quarterly strategic insights to C-Suite, securing $2M+ in additional funding for security infrastructure upgrades through compelling business case presentations."
+        ]'
+        data-tags='["Security Hardening","Compliance","Audits","Team Development","C-Suite"]'
+        data-impact="100% audit pass">
+
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-company"><i class="fa-solid fa-building-columns"></i> BBVA</span>
+            <span class="project-year">2021 – 2024</span>
+          </div>
+          <h3 class="project-title">LATAM Infrastructure Health Check</h3>
+          <p class="project-subtitle">10 Countries · LATAM Region</p>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Region-wide program covering <strong>obsolescence, DR readiness, and security hardening</strong> across 10 LATAM countries.</p>
+          <div class="project-metrics">
+            <div class="pm-item"><div class="pm-value">65%</div><div class="pm-label">Vulns ↓</div></div>
+            <div class="pm-item"><div class="pm-value">$2M+</div><div class="pm-label">Funding</div></div>
+            <div class="pm-item"><div class="pm-value">10</div><div class="pm-label">Countries</div></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Security</span>
+            <span class="project-tag">Compliance</span>
+            <span class="project-tag">Audits</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact"><i class="fa-solid fa-circle-check"></i> 100% audit pass</div>
+            <span class="project-detail-link">View Case <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: PepsiCo -->
+      <article class="project-card reveal" data-category="fmcg"
+        data-title="Mobile CRM & AWS Cloud Rollout"
+        data-company="PepsiCo · LATAM Region"
+        data-year="2018 – 2021"
+        data-subtitle="IT Project Manager – LATAM"
+        data-desc="Led IT infrastructure and development projects across 11 LATAM countries within a global FMCG environment, focusing on SAP/Salesforce integration and AWS cloud adoption."
+        data-metrics='[{"v":"5,000+","l":"Users Enabled"},{"v":"99.9%","l":"Uptime"},{"v":"$800K","l":"Annual Savings"}]'
+        data-bullets='[
+          "Architected end-to-end rollout of Mobile CRM (SAP/Salesforce) integrating legacy systems with AWS Cloud, enabling 5,000+ field users with 99.9% system uptime during peak sales seasons.",
+          "Optimized SLA compliance from 92% to 98.5% by implementing proactive incident management frameworks, reducing average resolution time by 35% across 11 LATAM countries.",
+          "Led Kickoff, Smoke Test, and Go-Live presentations with external vendors (Platforms, AWS), reducing time-to-market for key initiatives by 25% through tight alignment on deliverables.",
+          "Conducted thorough business process analysis identifying improvement opportunities, generating $800K in annual operational savings through process automation and legacy decommissioning."
+        ]'
+        data-tags='["FMCG","SAP","Salesforce","AWS","SLA","Business Process"]'
+        data-impact="99.9% uptime">
+
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-company"><i class="fa-solid fa-bottle-water"></i> PepsiCo</span>
+            <span class="project-year">2018 – 2021</span>
+          </div>
+          <h3 class="project-title">Mobile CRM & AWS Cloud Rollout</h3>
+          <p class="project-subtitle">11 Countries · LATAM Region</p>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">End-to-end rollout of <strong>Mobile CRM (SAP/Salesforce)</strong> integrated with AWS Cloud, enabling 5,000+ field users.</p>
+          <div class="project-metrics">
+            <div class="pm-item"><div class="pm-value">5K+</div><div class="pm-label">Users</div></div>
+            <div class="pm-item"><div class="pm-value">99.9%</div><div class="pm-label">Uptime</div></div>
+            <div class="pm-item"><div class="pm-value">$800K</div><div class="pm-label">Savings</div></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">FMCG</span>
+            <span class="project-tag">SAP</span>
+            <span class="project-tag">AWS</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact"><i class="fa-solid fa-circle-check"></i> 99.9% uptime</div>
+            <span class="project-detail-link">View Case <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: BlueYonder -->
+      <article class="project-card reveal" data-category="consulting"
+        data-title="ERP & Logistics Acceleration Program"
+        data-company="BlueYonder · LATAM Region"
+        data-year="2021"
+        data-subtitle="Project Manager – LATAM"
+        data-desc="Engaged as specialist consultant to restructure and accelerate revenue-generating IT projects across LATAM."
+        data-metrics='[{"v":"65%","l":"Faster TTM"},{"v":"100%","l":"On Budget"},{"v":"0","l":"Downtime Risk"}]'
+        data-bullets='[
+          "Directed mobile, logistics, and ERP (SAP) projects including critical server replacements and database upgrades (SQL/Oracle), eliminating 100% of system downtime risks for core manufacturing modules.",
+          "Optimized release management processes reducing deployment cycles from 4 weeks to 10 days, accelerating time-to-market for key logistics initiatives by 65%.",
+          "Monitored scope, time, cost, risk, and quality metrics across project portfolio, maintaining 100% delivery within budget and schedule parameters."
+        ]'
+        data-tags='["ERP","SAP","Logistics","Release Management","Manufacturing"]'
+        data-impact="100% on budget">
+
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-company"><i class="fa-solid fa-truck-fast"></i> BlueYonder</span>
+            <span class="project-year">2021</span>
+          </div>
+          <h3 class="project-title">ERP & Logistics Acceleration Program</h3>
+          <p class="project-subtitle">LATAM Region</p>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Restructured and accelerated <strong>revenue-generating IT projects</strong>, eliminating downtime risks for core manufacturing modules.</p>
+          <div class="project-metrics">
+            <div class="pm-item"><div class="pm-value">65%</div><div class="pm-label">Faster TTM</div></div>
+            <div class="pm-item"><div class="pm-value">100%</div><div class="pm-label">On Budget</div></div>
+            <div class="pm-item"><div class="pm-value">0</div><div class="pm-label">Downtime</div></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">ERP</span>
+            <span class="project-tag">Logistics</span>
+            <span class="project-tag">SAP</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact"><i class="fa-solid fa-circle-check"></i> 100% on budget</div>
+            <span class="project-detail-link">View Case <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: Banorte -->
+      <article class="project-card reveal" data-category="finance"
+        data-title="Emerging Tech Innovation PMO"
+        data-company="Grupo Financiero Banorte · Mexico"
+        data-year="2016 – 2017"
+        data-subtitle="PMO IT Innovation"
+        data-desc="Defined project scope for emerging technology initiatives in Mexico's largest financial group."
+        data-metrics='[{"v":"3","l":"Pilots Approved"},{"v":"$500K+","l":"Efficiency Gains"},{"v":"6 mo","l":"Time to Pilot"}]'
+        data-bullets='[
+          "Evaluated emerging technologies (Blockchain, AI, RPA) for viability in financial services, presenting 3 high-impact business cases approved for pilot testing within 6 months.",
+          "Collaborated with vendors, partners, and industry experts to align innovation goals with strategic KPIs, delivering $500K+ in projected efficiency gains."
+        ]'
+        data-tags='["Innovation","Blockchain","AI","RPA","Business Case","PMO"]'
+        data-impact="3 pilots approved">
+
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-company"><i class="fa-solid fa-lightbulb"></i> Banorte</span>
+            <span class="project-year">2016 – 2017</span>
+          </div>
+          <h3 class="project-title">Emerging Tech Innovation PMO</h3>
+          <p class="project-subtitle">Mexico · Financial Group</p>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Evaluated <strong>Blockchain, AI, and RPA</strong> for viability in financial services, delivering 3 approved pilot business cases.</p>
+          <div class="project-metrics">
+            <div class="pm-item"><div class="pm-value">3</div><div class="pm-label">Pilots</div></div>
+            <div class="pm-item"><div class="pm-value">$500K+</div><div class="pm-label">Gains</div></div>
+            <div class="pm-item"><div class="pm-value">6mo</div><div class="pm-label">To Pilot</div></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Innovation</span>
+            <span class="project-tag">AI</span>
+            <span class="project-tag">PMO</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact"><i class="fa-solid fa-circle-check"></i> 3 pilots approved</div>
+            <span class="project-detail-link">View Case <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 6: Actinver -->
+      <article class="project-card reveal" data-category="finance governance"
+        data-title="Core Banking Digital Transformation"
+        data-company="Grupo Financiero Actinver · Mexico"
+        data-year="2013 – 2016"
+        data-subtitle="PMO IT Infrastructure"
+        data-desc="Led IT infrastructure projects supporting the bank's digital transformation roadmap."
+        data-metrics='[{"v":"30%","l":"Volume ↑"},{"v":"0","l":"Audit Findings"},{"v":"3 yr","l":"Program"}]'
+        data-bullets='[
+          "Implemented new technologies supporting core banking digital channels, resulting in 30% increase in online transactional volumes within 18 months.",
+          "Ensured strict adherence to financial industry regulations (CNBV) and security standards, passing all external audits with zero observations."
+        ]'
+        data-tags='["Core Banking","CNBV","Compliance","Digital Channels","Infrastructure"]'
+        data-impact="Zero observations">
+
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-company"><i class="fa-solid fa-building-columns"></i> Actinver</span>
+            <span class="project-year">2013 – 2016</span>
+          </div>
+          <h3 class="project-title">Core Banking Digital Transformation</h3>
+          <p class="project-subtitle">Mexico · Banking Infrastructure</p>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Implemented new technologies supporting <strong>core banking digital channels</strong>, increasing online transactions by 30%.</p>
+          <div class="project-metrics">
+            <div class="pm-item"><div class="pm-value">30%</div><div class="pm-label">Volume ↑</div></div>
+            <div class="pm-item"><div class="pm-value">0</div><div class="pm-label">Findings</div></div>
+            <div class="pm-item"><div class="pm-value">3yr</div><div class="pm-label">Program</div></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Core Banking</span>
+            <span class="project-tag">CNBV</span>
+            <span class="project-tag">Infra</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact"><i class="fa-solid fa-circle-check"></i> Zero observations</div>
+            <span class="project-detail-link">View Case <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 7: Stefanini -->
+      <article class="project-card reveal" data-category="consulting"
+        data-title="Multi-Client Infra & Dev Portfolio"
+        data-company="Stefanini Mexico · Mexico"
+        data-year="2017 – 2018"
+        data-subtitle="Service Delivery Manager ITO"
+        data-desc="Led IT infrastructure and development projects across 11 LATAM countries for a portfolio of global clients."
+        data-metrics='[{"v":"11","l":"Countries"},{"v":"10+","l":"Clients"},{"v":"98.5%","l":"SLA"}]'
+        data-bullets='[
+          "Led IT infrastructure and development projects across 11 LATAM countries, focusing on SAP/Salesforce mobile CRM integration and AWS cloud adoption.",
+          "Delivered Infra & Dev IT projects for Nike, Eli Lilly, GSK, Gerdau Corsa, CNHi, ADO, FlightCentre, Valeo, TravelPort, and Edenred.",
+          "Optimized SLA compliance from 92% to 98.5% by implementing proactive incident management frameworks, reducing average resolution time by 35%."
+        ]'
+        data-tags='["Service Delivery","SLA","Multi-Client","SAP","Salesforce","AWS"]'
+        data-impact="98.5% SLA compliance">
+
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-company"><i class="fa-solid fa-server"></i> Stefanini</span>
+            <span class="project-year">2017 – 2018</span>
+          </div>
+          <h3 class="project-title">Multi-Client Infra & Dev Portfolio</h3>
+          <p class="project-subtitle">11 Countries · Global Clients</p>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Delivered IT infrastructure and development projects for <strong>Nike, Eli Lilly, GSK, Gerdau, CNHi, ADO, and more</strong>.</p>
+          <div class="project-metrics">
+            <div class="pm-item"><div class="pm-value">11</div><div class="pm-label">Countries</div></div>
+            <div class="pm-item"><div class="pm-value">10+</div><div class="pm-label">Clients</div></div>
+            <div class="pm-item"><div class="pm-value">98.5%</div><div class="pm-label">SLA</div></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Service Delivery</span>
+            <span class="project-tag">Multi-Client</span>
+            <span class="project-tag">SLA</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact"><i class="fa-solid fa-circle-check"></i> 98.5% SLA compliance</div>
+            <span class="project-detail-link">View Case <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE TIMELINE ===== -->
+<section id="experience" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Professional Experience</div>
+      <h2>Full Career Timeline</h2>
+      <p>20+ years of progressive leadership across FMCG, Financial Services, Healthcare IT, and Global Consulting.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">MUFG</div>
+            <div class="timeline-role">Global IT Project Director (PMD)</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Mexico · USA · Japan</div>
+          </div>
+          <div class="timeline-date">2024 – Jun 2026</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Spearheaded end-to-end CRM, marketing technology, and digital transformation programs bridging Mexico, USA, and Japan.</li>
+          <li>Led 4 concurrent cross-border programs resulting in <strong>$1.2M savings</strong> and <strong>18% CAPEX reduction</strong>.</li>
+          <li>Established PMO governance with weekly Steering Committee RAG dashboards, accelerating decisions by <strong>40%</strong>.</li>
+          <li>Consolidated 5 vendors into 2 partners, reducing external service costs by <strong>22%</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">BBVA</div>
+            <div class="timeline-role">Senior IT Project Manager – LATAM</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> LATAM Region</div>
+          </div>
+          <div class="timeline-date">2021 – 2024</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Directed IT infrastructure and security programs across 10 LATAM countries, reporting to CTO and CIO.</li>
+          <li>Reduced critical vulnerabilities by <strong>65%</strong> within 12 months.</li>
+          <li>Achieved <strong>100% adherence</strong> to regulations, passing all external audits.</li>
+          <li>Secured <strong>$2M+ funding</strong> for security upgrades through C-Suite business cases.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">BlueYonder</div>
+            <div class="timeline-role">Project Manager – LATAM</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> LATAM Region</div>
+          </div>
+          <div class="timeline-date">2021</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Directed mobile, logistics, and ERP (SAP) projects, eliminating <strong>100% of downtime risks</strong> for core manufacturing modules.</li>
+          <li>Reduced deployment cycles from 4 weeks to 10 days (<strong>65% acceleration</strong>).</li>
+          <li>Maintained <strong>100% delivery within budget and schedule</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">PepsiCo</div>
+            <div class="timeline-role">IT Project Manager – LATAM</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> 11 Countries · LATAM</div>
+          </div>
+          <div class="timeline-date">2018 – 2021</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Led IT infrastructure and development projects in a <strong>global FMCG environment</strong>, focusing on SAP/Salesforce and AWS.</li>
+          <li>Enabled <strong>5,000+ field users</strong> with <strong>99.9% uptime</strong> during peak sales seasons.</li>
+          <li>Improved SLA from 92% to 98.5%, reducing resolution time by <strong>35%</strong>.</li>
+          <li>Generated <strong>$800K annual savings</strong> through process automation and legacy decommissioning.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">Stefanini Mexico</div>
+            <div class="timeline-role">Service Delivery Manager ITO</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Mexico · LATAM</div>
+          </div>
+          <div class="timeline-date">2017 – 2018</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Led IT infrastructure and development projects across 11 LATAM countries.</li>
+          <li>Delivered projects for Nike, Eli Lilly, GSK, Gerdau Corsa, CNHi, ADO, FlightCentre, Valeo, TravelPort, Edenred.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">Grupo Financiero Banorte</div>
+            <div class="timeline-role">PMO IT Innovation</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Mexico</div>
+          </div>
+          <div class="timeline-date">2016 – 2017</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Evaluated emerging technologies (Blockchain, AI, RPA), presenting 3 business cases approved for pilot testing.</li>
+          <li>Delivered <strong>$500K+ in projected efficiency gains</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">Grupo Financiero Actinver</div>
+            <div class="timeline-role">PMO IT Infrastructure</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Mexico</div>
+          </div>
+          <div class="timeline-date">2013 – 2016</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Implemented new technologies increasing online transactional volumes by <strong>30%</strong>.</li>
+          <li>Passed all external audits with <strong>zero observations</strong> (CNBV compliance).</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-company">Cegedim</div>
+            <div class="timeline-role">IT Manager & HelpDesk LATAM</div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> LATAM</div>
+          </div>
+          <div class="timeline-date">2005 – 2012</div>
+        </div>
+        <ul class="timeline-body">
+          <li>Managed HelpDesk team of 15 technicians across 4 countries, maintaining <strong>97% SLA compliance</strong> for 24/7 healthcare ops.</li>
+          <li>Achieved <strong>99.8% system availability</strong> over 7-year tenure.</li>
+          <li>Reduced annual licensing costs by <strong>15%</strong> through vendor consolidation.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Skills & Tools</div>
+      <h2>Technical & Leadership Toolkit</h2>
+      <p>Senior Project Manager requirements.</p>
+    </div>
+
+    <div class="skills-categories">
+      <div class="skill-category reveal">
+        <h4><i class="fa-solid fa-diagram-project"></i> Project & Engineering Governance</h4>
+        <div class="skills-grid">
+          <div class="skill-tag"><i class="fa-solid fa-diagram-project"></i> End-to-End Capital Project Execution</div>
+          <div class="skill-tag"><i class="fa-solid fa-sitemap"></i> PMO & Stage-Gate Governance</div>
+          <div class="skill-tag"><i class="fa-solid fa-list-check"></i> Scope Definition & Estimating</div>
+          <div class="skill-tag"><i class="fa-solid fa-calendar-check"></i> Scheduling & Stage-Gate Documentation</div>
+          <div class="skill-tag"><i class="fa-solid fa-file-shield"></i> Project Control Logs</div>
+          <div class="skill-tag"><i class="fa-solid fa-arrows-rotate"></i> Change Control & Risk Management</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h4><i class="fa-solid fa-coins"></i> Cost, Schedule & Compliance</h4>
+        <div class="skills-grid">
+          <div class="skill-tag"><i class="fa-solid fa-coins"></i> Cost & Schedule Management</div>
+          <div class="skill-tag"><i class="fa-solid fa-wallet"></i> CAPEX / OPEX Management</div>
+          <div class="skill-tag"><i class="fa-solid fa-shield-halved"></i> SHE, Food Safety & Environmental</div>
+          <div class="skill-tag"><i class="fa-solid fa-file-contract"></i> Permitting & Regulatory Compliance</div>
+          <div class="skill-tag"><i class="fa-solid fa-clipboard-check"></i> Audit Readiness & Zero Findings</div>
+          <div class="skill-tag"><i class="fa-solid fa-gavel"></i> Contract & Vendor Negotiation</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h4><i class="fa-solid fa-people-group"></i> Leadership & Stakeholders</h4>
+        <div class="skills-grid">
+          <div class="skill-tag"><i class="fa-solid fa-people-group"></i> Multidisciplinary Team Leadership</div>
+          <div class="skill-tag"><i class="fa-solid fa-handshake"></i> External Contractors & Vendors</div>
+          <div class="skill-tag"><i class="fa-solid fa-bullhorn"></i> C-Level & Steering Committee Communication</div>
+          <div class="skill-tag"><i class="fa-solid fa-landmark"></i> Permitting Authorities & Utilities</div>
+          <div class="skill-tag"><i class="fa-solid fa-earth-americas"></i> Cross-Cultural Collaboration</div>
+          <div class="skill-tag"><i class="fa-solid fa-user-graduate"></i> Mentoring & Team Development</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h4><i class="fa-solid fa-gauge-high"></i> Operational Excellence & Methods</h4>
+        <div class="skills-grid">
+          <div class="skill-tag"><i class="fa-solid fa-gauge-high"></i> TPM · WCM · IM</div>
+          <div class="skill-tag"><i class="fa-solid fa-arrows-spin"></i> Continuous Improvement</div>
+          <div class="skill-tag"><i class="fa-solid fa-robot"></i> Process Automation</div>
+          <div class="skill-tag"><i class="fa-solid fa-trash-can"></i> Legacy Decommissioning</div>
+          <div class="skill-tag"><i class="fa-solid fa-code-branch"></i> Agile · SAFe · Scrum · Waterfall</div>
+          <div class="skill-tag"><i class="fa-solid fa-chart-line"></i> Executive Dashboards & Reporting</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h4><i class="fa-solid fa-toolbox"></i> Tools & Platforms</h4>
+        <div class="skills-grid">
+          <div class="skill-tag"><i class="fa-brands fa-microsoft"></i> MS Office · MS Project</div>
+          <div class="skill-tag"><i class="fa-solid fa-database"></i> SAP</div>
+          <div class="skill-tag"><i class="fa-brands fa-salesforce"></i> Salesforce (Marketing / Sales / Service / Data Cloud)</div>
+          <div class="skill-tag"><i class="fa-brands fa-aws"></i> AWS Cloud</div>
+          <div class="skill-tag"><i class="fa-brands fa-jira"></i> JIRA · Confluence</div>
+          <div class="skill-tag"><i class="fa-solid fa-chart-pie"></i> Power BI · Tableau (dashboards)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Certifications</div>
+      <h2>Professional Credentials</h2>
+      <p>Industry-recognized certifications validating project management and IT service management expertise.</p>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <i class="fa-solid fa-certificate"></i>
+        <h5>PMP</h5>
+        <p>Project Management Professional</p>
+      </div>
+      <div class="cert-card reveal">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h5>ITIL Foundations</h5>
+        <p>IT Service Management</p>
+      </div>
+      <div class="cert-card reveal">
+        <i class="fa-solid fa-headset"></i>
+        <h5>ITIL SOA</h5>
+        <p>Support Operation & Analysis</p>
+      </div>
+      <div class="cert-card reveal">
+        <i class="fa-solid fa-arrows-spin"></i>
+        <h5>Scrum</h5>
+        <p>Agile Framework</p>
+      </div>
+      <div class="cert-card reveal">
+        <i class="fa-brands fa-jira"></i>
+        <h5>JIRA Advanced</h5>
+        <p>Managing & Administrating Jira</p>
+      </div>
+      <div class="cert-card reveal">
+        <i class="fa-brands fa-confluence"></i>
+        <h5>Confluence</h5>
+        <p>Managers & Admins</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Education</div>
+      <h2>Academic Foundation</h2>
+    </div>
+
+    <div class="education-grid">
+      <div class="edu-card reveal">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h4>Master's Degree · MS Computer Science</h4>
+        <p>Laureate International Universities, UVM</p>
+        <span class="edu-year">2001</span>
+      </div>
+      <div class="edu-card reveal">
+        <i class="fa-solid fa-user-graduate"></i>
+        <h4>Bachelor's Degree · BS Computer Systems Engineer</h4>
+        <p>Laureate International Universities, UVM</p>
+        <span class="edu-year">1992</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="section-label">Impact</div>
+      <h2>What Stakeholders Say</h2>
+      <p>Feedback from executives and cross-functional partners across major programs.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text">
+          "Jose Luis brought structure and discipline to a complex multi-country program. His stage-gate governance and RAG dashboards gave our executive team the visibility we needed to make fast, confident decisions."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">GH</div>
+          <div>
+            <div class="testimonial-name">Global Head of Infrastructure</div>
+            <div class="testimonial-role">MUFG · USA / Japan</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text">
+          "He delivered on every commitment — on time, on budget, and with zero audit findings. His ability to align vendors, internal teams, and regulators is rare and extremely valuable."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CT</div>
+          <div>
+            <div class="testimonial-name">CTO</div>
+            <div class="testimonial-role">BBVA · LATAM Region</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <p class="testimonial-text">
+          "Jose Luis turned around a stalled portfolio and gave us a repeatable delivery model. His process automation work generated $800K in annual savings — a direct P&L impact."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">VP</div>
+          <div>
+            <div class="testimonial-name">VP of IT</div>
+            <div class="testimonial-role">PepsiCo · LATAM Region</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Let's Build Something Great Together</h2>
+      <p>Available for Senior Project Manager roles in Mexico and globally. Let's discuss how I can deliver your next major capital investment project — end-to-end.</p>
+      <a href="mailto:jlrodriguezglez@gmail.com" class="btn btn-primary" style="padding: 14px 28px; font-size: 0.95rem;">
+        <i class="fa-solid fa-envelope"></i> Send Email
+      </a>
+      <div class="contact-methods">
+        <a href="mailto:jlrodriguezglez@gmail.com" class="contact-pill">
+          <i class="fa-solid fa-envelope"></i> jlrodriguezglez@gmail.com
+        </a>
+        <a href="tel:+525532620819" class="contact-pill">
+          <i class="fa-solid fa-phone"></i> +52 55 3262 0819
+        </a>
+        <a href="https://linkedin.com/in/jlrg14" target="_blank" rel="noopener" class="contact-pill">
+          <i class="fa-brands fa-linkedin"></i> linkedin.com/in/jlrg14
+        </a>
+        <a href="*" target="_blank" rel="noopener" class="contact-pill">
+          <i class="fa-solid fa-globe"></i> Portfolio Site
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo-mark" style="width: 32px; height: 32px; font-size: 0.75rem;">JR</div>
+      <div>
+        <div style="color: var(--text); font-weight: 600;">Jose Luis Rodriguez</div>
+        <div style="font-size: 0.78rem;">Senior Project Manager</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>© 2026 · All rights reserved</div>
+  </div>
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="modal-header">
+      <div class="project-company" id="modalCompany"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalSubtitle"></p>
+    </div>
+    <div class="modal-body">
+      <h4><i class="fa-solid fa-circle-info"></i> Overview</h4>
+      <p id="modalDesc"></p>
+
+      <h4><i class="fa-solid fa-chart-simple"></i> Key Results</h4>
+      <div class="modal-metrics" id="modalMetrics"></div>
+
+      <h4><i class="fa-solid fa-list-check"></i> What I Delivered</h4>
+      <ul id="modalBullets"></ul>
+
+      <h4><i class="fa-solid fa-tags"></i> Focus Areas</h4>
+      <div class="project-tags" id="modalTags"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ===== Navbar scroll =====
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // ===== Mobile menu =====
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('active'));
+  });
+
+  // ===== Scroll reveal =====
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ===== Animated counters =====
+  const counters = document.querySelectorAll('[data-count]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        const animate = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = prefix + Math.floor(eased * target).toLocaleString() + suffix;
+          if (progress < 1) requestAnimationFrame(animate);
+          else el.textContent = prefix + target.toLocaleString() + suffix;
+        };
+        requestAnimationFrame(animate);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterObserver.observe(c));
+
+  // ===== Smooth anchor scroll =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ===== Projects filter =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      projectCards.forEach(card => {
+        const cats = card.dataset.category || '';
+        if (filter === 'all' || cats.includes(filter)) {
+          card.classList.remove('hidden');
+          card.style.animation = 'none';
+          setTimeout(() => card.style.animation = '', 10);
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // ===== Modal =====
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalClose = document.getElementById('modalClose');
+  const modalCompany = document.getElementById('modalCompany');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalSubtitle = document.getElementById('modalSubtitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalMetrics = document.getElementById('modalMetrics');
+  const modalBullets = document.getElementById('modalBullets');
+  const modalTags = document.getElementById('modalTags');
+
+  function openModal(card) {
+    modalCompany.textContent = card.dataset.company;
+    modalTitle.textContent = card.dataset.title;
+    modalSubtitle.textContent = card.dataset.subtitle;
+    modalDesc.textContent = card.dataset.desc;
+
+    // Metrics
+    modalMetrics.innerHTML = '';
+    try {
+      const metrics = JSON.parse(card.dataset.metrics);
+      metrics.forEach(m => {
+        modalMetrics.innerHTML += `<div class="pm-item"><div class="pm-value">${m.v}</div><div class="pm-label">${m.l}</div></div>`;
+      });
+    } catch(e) {}
+
+    // Bullets
+    modalBullets.innerHTML = '';
+    try {
+      const bullets = JSON.parse(card.dataset.bullets);
+      bullets.forEach(b => {
+        modalBullets.innerHTML += `<li>${b}</li>`;
+      });
+    } catch(e) {}
+
+    // Tags
+    modalTags.innerHTML = '';
+    try {
+      const tags = JSON.parse(card.dataset.tags);
+      tags.forEach(t => {
+        modalTags.innerHTML += `<span class="project-tag">${t}</span>`;
+      });
+    } catch(e) {}
+
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  projectCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // No abrir si se hace click en un enlace
+      if (e.target.closest('a')) return;
+      openModal(card);
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // ===== Active nav link on scroll =====
+  const sections = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navAnchors.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+
+  // ===== Parallax hero card =====
+  const heroCard = document.getElementById('heroCard');
+  if (heroCard && window.matchMedia('(min-width: 900px)').matches) {
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 8;
+      const y = (e.clientY / window.innerHeight - 0.5) * 8;
+      heroCard.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
+    });
+  }
+</script>
+
+</body>
+</html>
