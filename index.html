@@ -33,16 +33,16 @@
     --text: #f1f5f9;
     --text-dim: #94a3b8;
     --text-mute: #64748b;
-    --accent: #00d4ff;
-    --accent-2: #7c3aed;
-    --accent-3: #f59e0b;
+    --accent: #4169E1;
+    --accent-2: #0026A6;
+    --accent-3: #1E3A8A;
     --accent-4: #10b981;
-    --gradient: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
-    --gradient-2: linear-gradient(135deg, #7c3aed 0%, #f59e0b 100%);
-    --gradient-3: linear-gradient(135deg, #10b981 0%, #00d4ff 100%);
+    --gradient: linear-gradient(135deg, #4169E1 0%, #0026A6 100%);
+    --gradient-2: linear-gradient(135deg, #0026A6 0%, #1E3A8A 100%);
+    --gradient-3: linear-gradient(135deg, #10b981 0%, #4169E1 100%);
     --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
     --shadow: 0 20px 60px rgba(0,0,0,0.5);
-    --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
+    --shadow-glow: 0 0 40px rgba(65, 105, 225, 0.15);
     --radius: 16px;
     --radius-lg: 24px;
     --radius-sm: 10px;
@@ -71,8 +71,8 @@
     border-radius: 50%; filter: blur(140px); opacity: 0.12;
     animation: float 25s ease-in-out infinite;
   }
-  .bg-ambient::before { background: var(--accent); top: -250px; left: -250px; }
-  .bg-ambient::after { background: var(--accent-2); bottom: -250px; right: -250px; animation-delay: -12s; }
+  .bg-ambient::before { background: #4169E1; top: -250px; left: -250px; }
+  .bg-ambient::after { background: #0026A6; bottom: -250px; right: -250px; animation-delay: -12s; }
   @keyframes float {
     0%, 100% { transform: translate(0,0) scale(1); }
     50% { transform: translate(80px, 60px) scale(1.15); }
@@ -80,8 +80,8 @@
   .grid-bg {
     position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.3;
     background-image:
-      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(65, 105, 225, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(65, 105, 225, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
     -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
@@ -110,7 +110,7 @@
   .logo-mark {
     width: 38px; height: 38px; border-radius: 11px; background: var(--gradient);
     display: grid; place-items: center; font-weight: 800; color: #080b14;
-    font-size: 0.85rem; box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
+    font-size: 0.85rem; box-shadow: 0 6px 20px rgba(65, 105, 225, 0.3);
     transition: transform 0.3s;
   }
   .logo:hover .logo-mark { transform: rotate(-8deg) scale(1.05); }
@@ -140,9 +140,9 @@
   }
   .btn-primary {
     background: var(--gradient); color: #080b14;
-    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(65, 105, 225, 0.25);
   }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0, 212, 255, 0.45); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(65, 105, 225, 0.45); }
   .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
   .btn-sm { padding: 9px 16px; font-size: 0.8rem; }
@@ -160,8 +160,8 @@
   .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 60px; align-items: center; }
   .hero-badge {
     display: inline-flex; align-items: center; gap: 10px;
-    padding: 8px 16px; background: rgba(0, 212, 255, 0.08);
-    border: 1px solid rgba(0, 212, 255, 0.25); border-radius: 100px;
+    padding: 8px 16px; background: rgba(65, 105, 225, 0.08);
+    border: 1px solid rgba(65, 105, 225, 0.25); border-radius: 100px;
     font-size: 0.78rem; color: var(--accent); margin-bottom: 26px;
     font-weight: 600; letter-spacing: 0.02em;
   }
@@ -208,7 +208,7 @@
   .hero-card::after {
     content: ''; position: absolute; top: -50%; right: -50%;
     width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(0,38,166,0.10) 0%, transparent 60%);
     pointer-events: none;
   }
   .hero-card > * { position: relative; z-index: 1; }
@@ -216,7 +216,7 @@
     width: 84px; height: 84px; border-radius: 22px; background: var(--gradient);
     display: grid; place-items: center; font-family: 'Space Grotesk', sans-serif;
     font-weight: 800; font-size: 1.9rem; color: #080b14; margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(65, 105, 225, 0.3);
   }
   .hero-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; margin-bottom: 4px; }
   .hero-card .role { color: var(--accent); font-size: 0.88rem; font-weight: 500; margin-bottom: 6px; }
@@ -366,7 +366,7 @@
   .competence-card:hover::after { height: 100%; }
   .competence-icon {
     width: 54px; height: 54px; border-radius: 14px;
-    background: linear-gradient(135deg, rgba(0,212,255,0.12), rgba(124,58,237,0.12));
+    background: linear-gradient(135deg, rgba(65,105,225,0.14), rgba(0,38,166,0.14));
     border: 1px solid var(--border-2); display: grid; place-items: center;
     font-size: 1.35rem; color: var(--accent); margin-bottom: 18px;
     transition: all 0.35s;
@@ -374,7 +374,7 @@
   .competence-card:hover .competence-icon {
     background: var(--gradient); color: #080b14;
     transform: scale(1.08) rotate(-6deg);
-    box-shadow: 0 10px 24px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 24px rgba(65, 105, 225, 0.3);
   }
   .competence-card h4 {
     font-family: 'Space Grotesk', sans-serif; font-size: 1.02rem;
@@ -397,7 +397,7 @@
   .filter-btn.active {
     background: var(--gradient); color: #080b14;
     border-color: transparent; font-weight: 600;
-    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.25);
+    box-shadow: 0 6px 20px rgba(65, 105, 225, 0.25);
   }
 
   .projects-grid {
@@ -413,7 +413,7 @@
   }
   .project-card:hover {
     transform: translateY(-8px); border-color: var(--accent);
-    box-shadow: 0 32px 64px rgba(0, 212, 255, 0.15);
+    box-shadow: 0 32px 64px rgba(65, 105, 225, 0.15);
   }
   .project-card.hidden { display: none; }
   .project-header {
@@ -564,11 +564,11 @@
   .timeline-item::before {
     content: ''; position: absolute; left: -37px; top: 8px;
     width: 16px; height: 16px; border-radius: 50%; background: var(--bg);
-    border: 3px solid var(--accent); box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.12);
+    border: 3px solid var(--accent); box-shadow: 0 0 0 4px rgba(65, 105, 225, 0.12);
     transition: all 0.3s;
   }
   .timeline-item:hover::before {
-    background: var(--accent); box-shadow: 0 0 0 7px rgba(0, 212, 255, 0.25);
+    background: var(--accent); box-shadow: 0 0 0 7px rgba(65, 105, 225, 0.25);
     transform: scale(1.15);
   }
   .timeline-header {
@@ -642,8 +642,8 @@
     transition: all 0.35s; position: relative; overflow: hidden;
   }
   .cert-card:hover {
-    border-color: var(--accent-3); transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.12);
+    border-color: var(--accent); transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(65, 105, 225, 0.18);
   }
   .cert-card i {
     font-size: 2rem; margin-bottom: 14px; display: block;
@@ -733,7 +733,7 @@
   .cta-box::before {
     content: ''; position: absolute; top: -50%; left: -50%;
     width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 55%);
+    background: radial-gradient(circle, rgba(65,105,225,0.10) 0%, transparent 55%);
     animation: rotate 25s linear infinite;
   }
   @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -793,7 +793,7 @@
     border-color: var(--accent);
     color: var(--accent);
     transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(65, 105, 225, 0.25);
     animation-play-state: paused;
   }
   @keyframes counterFloat {
@@ -830,9 +830,9 @@
     animation: counterPulse 0.6s ease-out;
   }
   @keyframes counterPulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
-    50% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(0, 212, 255, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(65, 105, 225, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(65, 105, 225, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(65, 105, 225, 0); }
   }
 
   /* ===== ANIMATIONS ===== */
@@ -1870,7 +1870,7 @@
       </div>
     </div>
 
-    <!-- ✅ VISIT COUNTER (agregado) -->
+    <!-- VISIT COUNTER -->
     <div class="visit-counter" id="visitCounter" title="Total visits to this portfolio">
       <i class="fa-solid fa-eye"></i>
       <span class="vc-label">Visits:</span>
@@ -2092,7 +2092,7 @@
     });
   }
 
-  // ===== ✅ VISIT COUNTER (agregado) =====
+  // ===== VISIT COUNTER (funcional con triple fallback) =====
   (async function() {
     const counterEl = document.getElementById('visitCounter');
     const valueEl = document.getElementById('visitCount');
@@ -2101,42 +2101,68 @@
     const namespace = 'joseluisrodriguez-portfolio';
     const key = 'portfolio-2026';
     const localKey = 'jr_portfolio_last_visit';
+    const totalKey = 'jr_portfolio_total_visits';
     const oneDay = 24 * 60 * 60 * 1000;
 
-    // Solo incrementa 1 vez cada 24h por navegador
     const last = localStorage.getItem(localKey);
     const now = Date.now();
     const shouldIncrement = !last || (now - parseInt(last, 10)) > oneDay;
 
+    let target = 0;
+
+    // Intento 1: API externa (CountAPI)
     try {
       const endpoint = shouldIncrement
-        ? `https://api.counterapi.dev/v1/${namespace}/${key}/up`
-        : `https://api.counterapi.dev/v1/${namespace}/${key}/`;
-      const res = await fetch(endpoint);
+        ? `https://api.countapi.xyz/hit/${namespace}/${key}`
+        : `https://api.countapi.xyz/get/${namespace}/${key}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 4000);
+      const res = await fetch(endpoint, { signal: controller.signal });
+      clearTimeout(timeoutId);
       const data = await res.json();
-      const target = data.count || data.value || 0;
-
-      if (shouldIncrement) localStorage.setItem(localKey, now.toString());
-
-      // Animación de conteo hacia arriba
-      const duration = 1500;
-      const start = performance.now();
-      const animate = (n) => {
-        const p = Math.min((n - start) / duration, 1);
-        const e = 1 - Math.pow(1 - p, 3);
-        valueEl.textContent = Math.floor(e * target).toLocaleString();
-        if (p < 1) requestAnimationFrame(animate);
-        else {
-          valueEl.textContent = target.toLocaleString();
-          // Pulso al terminar
-          counterEl.classList.add('pulse');
-          setTimeout(() => counterEl.classList.remove('pulse'), 700);
-        }
-      };
-      requestAnimationFrame(animate);
+      if (data && typeof data.value === 'number') {
+        target = data.value;
+        if (shouldIncrement) localStorage.setItem(localKey, now.toString());
+        // Sincronizar total local con el remoto
+        localStorage.setItem(totalKey, target.toString());
+      }
     } catch (err) {
-      valueEl.textContent = '—';
+      // Fallback silencioso a localStorage
     }
+
+    // Intento 2: Fallback a localStorage
+    if (!target) {
+      let localTotal = parseInt(localStorage.getItem(totalKey) || '0', 10);
+      if (shouldIncrement) {
+        localTotal += 1;
+        localStorage.setItem(totalKey, localTotal.toString());
+        localStorage.setItem(localKey, now.toString());
+      }
+      target = localTotal;
+    }
+
+    // Intento 3: Último recurso (mínimo visible)
+    if (!target) {
+      target = 1;
+      localStorage.setItem(totalKey, '1');
+      localStorage.setItem(localKey, now.toString());
+    }
+
+    // Animación de conteo
+    const duration = 1500;
+    const start = performance.now();
+    const animate = (n) => {
+      const p = Math.min((n - start) / duration, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+      valueEl.textContent = Math.floor(e * target).toLocaleString();
+      if (p < 1) requestAnimationFrame(animate);
+      else {
+        valueEl.textContent = target.toLocaleString();
+        counterEl.classList.add('pulse');
+        setTimeout(() => counterEl.classList.remove('pulse'), 700);
+      }
+    };
+    requestAnimationFrame(animate);
   })();
 </script>
 
